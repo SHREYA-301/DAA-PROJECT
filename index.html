@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart City AAROHAN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #292929;
+            background-color: #050012;
             color: aliceblue;
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
@@ -36,7 +37,7 @@
             cursor: pointer;
             border: black;
             border-radius: 5px;
-            background-color: #061ab7;
+            background: linear-gradient(90deg, #020146, #000088);
             color: white;
             transition: background-color 0.3s;
         }
@@ -46,7 +47,7 @@
         #content {
             margin-top: 20px;
             font-size: 1.2em;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             display: none;
             text-align: left;
             margin-left: auto;
@@ -55,83 +56,115 @@
             border: 1px solid #040000;
             padding: 20px;
             border-radius: 10px;
-            background-color: #3d3d3d;
+            background-color: #080025;
+        }
+        pre {
+            background-color: #ffffff;
+            color: #000;
+            padding: 10px;
+            border-color: #0c0024;
+            border-radius: 10px;
+            overflow: auto;
+        }
+
+        .home-box {
+    background: linear-gradient(145deg, #060011, #120136);
+    color: #f5f5f5;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #3498db;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 116, 0.5);
+    width: 1100px; /* Fixed width */
+    height: 125px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow of content */
+}
+.home h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #090161, #12d5f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subheading {
+            margin-top: -10px;
+            font-size: 24px;
+            font-style: italic;
+            color: #1a74ce;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            background-color: #f4f4f4;
+            border: 1px solid #0a0909;
+            padding: 10px;
+            text-align: left;
+            color:black;
+        }
+        th {
+            background-color: #f4f4f4;
+            color:black;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+            color:black;
         }
     </style>
     <script>
-        function showIntroduction() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
-                <h3>Introduction</h3>
-                <p><strong>Name:</strong> Bhagyashree.D.Y</p>
-                <p><strong>Roll no:</strong> 327</p>
-                <p><strong>USN:</strong> 01FE23BCS144</p>S
-                <p><strong>Division:</strong> C</p>
-                <p><strong>Business cases:</strong></p>
-                <ul>
-                    <li>Transportation</li>
-                    <li>Tourism</li>
-                    <li>Industries</li>
-                    <li>Wind mills</li>
-                </ul>
-            `;
-            content.style.display = 'block';
-        }
 
-        function showSDGMapping() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
-                <h3>SDG Mapping</h3>
-                <h4>1. Transportation</h4>
-                <ul>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.1.1: Proportion of rural population living within 2 km of an all-season road</li>
-                    <li>9.4.1: CO₂ emissions per unit of GDP (by sector, including transport)</li>
-                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
-                    <li>11.2.1: Proportion of population with access to public transport by age, sex, and persons with disabilities</li>
-                    <li><strong>SDG 13:</strong> Climate Action</li>
-                    <li>13.2.2: Total greenhouse gas emissions per year by transport and energy sectors</li>
-                </ul>
-                <h4>2. Tourism</h4>
-                <ul>
-                    <li><strong>SDG 8:</strong> Decent Work and Economic Growth</li>
-                    <li>8.9.1: Tourism direct GDP as a proportion of total GDP and in growth rate</li>
-                    <li>8.9.2: Number of jobs in sustainable tourism industries</li>
-                    <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
-                    <li>12.b.1: Implementation of sustainable tourism policies and plans with monitoring tools</li>
-                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
-                    <li>11.4.1: Expenditure on cultural and natural heritage as a proportion of total GDP</li>
-                </ul>
-                <h4>3. Industries</h4>
-                <ul>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.2.1: Manufacturing value added as a proportion of GDP</li>
-                    <li>9.4.1: CO₂ emissions per unit of value added (for industries)</li>
-                    <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
-                    <li>12.5.1: National recycling rate and tons of material recycled</li>
-                    <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
-                    <li>7.3.1: Energy intensity measured in terms of primary energy and GDP</li>
-                </ul>
-                <h4>4. Wind Energy</h4>
-                <ul>
-                    <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
-                    <li>7.2.1: Renewable energy share in the total final energy consumption</li>
-                    <li>7.b.1: Investment in renewable energy as a proportion of GDP</li>
-                    <li><strong>SDG 13:</strong> Climate Action</li>
-                    <li>13.1.3: Number of countries integrating climate change mitigation policies</li>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.b.1: Proportion of medium and high-tech industry value added in total industry value added</li>
-                </ul>
-            `;
-            content.style.display = 'block';
-        }
+function showSDGMapping() {
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <h3>SDG Mapping</h3>
+        <h4>1. Residential</h4>
+        <ul>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+            <li>Target 11.1: Ensure access for all to adequate, safe, and affordable housing.</li>
+            <li>Indicator 11.1.1: Proportion of population living in adequate housing.</li>
+            <li>Target 11.3: Enhance inclusive and sustainable urbanization.</li>
+            <li>Indicator 11.3.1: Ratio of land consumption rate to population growth rate.</li>
+            <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
+            <li>Target 7.1: Ensure universal access to affordable, reliable, and modern energy services.</li>
+            <li>Indicator 7.1.1: Proportion of population with access to electricity.</li>
+        </ul>
+        <h4>2. Waste Management</h4>
+        <ul>
+            <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
+            <li>Target 12.4: Achieve environmentally sound management of chemicals and all wastes.</li>
+            <li>Indicator 12.4.2: Hazardous waste generated per capita and proportion treated.</li>
+            <li>Target 12.5: Substantially reduce waste generation through prevention, reduction, recycling, and reuse.</li>
+            <li>Indicator 12.5.1: National recycling rate and tons of material recycled.</li>
+            <li><strong>SDG 6:</strong> Clean Water and Sanitation</li>
+            <li>Target 6.3: Improve water quality by reducing pollution, eliminating dumping, and minimizing release of hazardous chemicals and materials.</li>
+            <li>Indicator 6.3.1: Proportion of wastewater safely treated.</li>
+        </ul>
+        <h4>3. Recycling</h4>
+        <ul>
+            <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
+            <li>Target 12.5: Substantially reduce waste generation through prevention, reduction, recycling, and reuse.</li>
+            <li>Indicator 12.5.1: National recycling rate and tons of material recycled.</li>
+            <li>Target 12.6: Encourage companies to adopt sustainable practices.</li>
+            <li>Indicator 12.6.1: Number of companies publishing sustainability reports.</li>
+            <li><strong>SDG 13:</strong> Climate Action</li>
+            <li>Target 13.2: Integrate climate change measures into national policies, strategies, and planning.</li>
+            <li>Indicator 13.2.1: Number of countries with climate change mitigation/adaptation strategies.</li>
+        </ul>
+        <h4>4. Green Spaces</h4>
+        <ul>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+            <li>Target 11.7: Provide universal access to safe, inclusive, and accessible, green and public spaces.</li>
+            <li>Indicator 11.7.1: Average share of built-up area that is open space for public use.</li>
+            <li>Target 11.4: Strengthen efforts to protect and safeguard the world’s cultural and natural heritage.</li>
+            <li>Indicator 11.4.1: Expenditure on the preservation and conservation of natural and cultural heritage.</li>
+        </ul>
+    `;
+    content.style.display = 'block';
+}
 
-        function showTransportation() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
-                `;
-            content.style.display = 'block';
-        }
+
 
 
 
@@ -141,130 +174,935 @@
     const content = document.getElementById('content');
     content.innerHTML = `
         <h3>Business Cases</h3>
-        <h4>Green Industries and Manufacturing</h4>
-        <p>Transitioning industries to energy-efficient operations and adopting renewable energy sources while promoting a circular economy.</p>
-        <h4>Wind Energy Development</h4>
-        <p>Utilizing wind farms to generate clean energy, reducing dependency on fossil fuels and providing sustainable power to the city.</p>
-        <h4>Sustainable Tourism Development</h4>
-        <p>Promoting eco-tourism by integrating technology, preserving local culture, and ensuring minimal environmental impact to attract and engage tourists.</p>
-        <h4>Smart Transportation Solutions</h4>
-        <p>Enhancing urban mobility through electric vehicles, public transport optimization, and intelligent traffic systems for efficient and sustainable travel.</p>
+        
+        <h4>Smart Residential Communities</h4>
+        <ul>
+            <li>Design smart homes with IoT-enabled devices for optimized energy consumption and eco-friendly living to improve affordability and sustainability.</li>
+            <li>Develop energy-efficient and tech-enabled residential areas focusing on sustainability and environmental harmony.</li>
+        </ul>
+        
+        <h4>Waste Management Systems</h4>
+        <ul>
+            <li>Implement AI-driven systems for waste segregation, collection, and recycling to achieve a zero-waste goal.</li>
+        </ul>
+        
+        <h4>E-Waste Recycling</h4>
+        <ul>
+            <li>Set up advanced facilities for recycling materials and safely managing e-waste to reduce pollution.</li>
+        </ul>
+        
+        <h4>Green Urban Design</h4>
+        <ul>
+            <li>Develop parks, rooftop gardens, and urban forests to improve air quality, biodiversity, and mental well-being.</li>
+        </ul>
     `;
     content.style.display = 'block';
 }
 
-        function showSDGMapping() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
-                <h3>SDG Mapping</h3>
-                <h4>1. Transportation</h4>
-                <ul>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.1.1: Proportion of rural population living within 2 km of an all-season road</li>
-                    <li>9.4.1: CO₂ emissions per unit of GDP (by sector, including transport)</li>
-                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
-                    <li>11.2.1: Proportion of population with access to public transport by age, sex, and persons with disabilities</li>
-                    <li><strong>SDG 13:</strong> Climate Action</li>
-                    <li>13.2.2: Total greenhouse gas emissions per year by transport and energy sectors</li>
-                </ul>
-                <h4>2. Tourism</h4>
-                <ul>
-                    <li><strong>SDG 8:</strong> Decent Work and Economic Growth</li>
-                    <li>8.9.1: Tourism direct GDP as a proportion of total GDP and in growth rate</li>
-                    <li>8.9.2: Number of jobs in sustainable tourism industries</li>
-                    <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
-                    <li>12.b.1: Implementation of sustainable tourism policies and plans with monitoring tools</li>
-                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
-                    <li>11.4.1: Expenditure on cultural and natural heritage as a proportion of total GDP</li>
-                </ul>
-                <h4>3. Industries</h4>
-                <ul>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.2.1: Manufacturing value added as a proportion of GDP</li>
-                    <li>9.4.1: CO₂ emissions per unit of value added (for industries)</li>
-                    <li><strong>SDG 12:</strong> Responsible Consumption and Production</li>
-                    <li>12.5.1: National recycling rate and tons of material recycled</li>
-                    <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
-                    <li>7.3.1: Energy intensity measured in terms of primary energy and GDP</li>
-                </ul>
-                <h4>4. Wind Energy</h4>
-                <ul>
-                    <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
-                    <li>7.2.1: Renewable energy share in the total final energy consumption</li>
-                    <li>7.b.1: Investment in renewable energy as a proportion of GDP</li>
-                    <li><strong>SDG 13:</strong> Climate Action</li>
-                    <li>13.1.3: Number of countries integrating climate change mitigation policies</li>
-                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-                    <li>9.b.1: Proportion of medium and high-tech industry value added in total industry value added</li>
-                </ul>
-            `;
-            content.style.display = 'block';
-        }
 
 
 function showCodeImplementation() {
     const content = document.getElementById('content');
     content.innerHTML = `
-        <h3>Code Implementation for Smart City Domains</h3>
-        <h4>1. Transportation</h4>
+        <h3>Code Implementation for Business Cases in Smart City Domains</h3>
+
+        <h4>1. Smart Residential Communities</h4>
+        <p><strong>Business Case:</strong> Creating efficient residential areas with optimized resource allocation and access to utilities.</p>
         <ul>
-            <li><strong>Dijkstra's Algorithm:</strong> Find the shortest route between two points in a city's transportation network.</li>
-            <li><strong>Kruskal's Algorithm:</strong> Design an efficient road network by finding the minimum spanning tree of connected intersections.</li>
-            <li><strong>BFS/DFS:</strong> Traverse through routes to detect congested areas or alternate paths.</li>
-            <li><strong>Heap:</strong> Manage priority queues for traffic signal optimization and emergency vehicle routing.</li>
-            <li><strong>Union-Find (Disjoint Sets):</strong> Track connected roads and highways to monitor accessibility during maintenance or natural disasters.</li>
+            <li><strong>AVL Trees:</strong> Efficiently manage databases for resident records, such as household details and resource consumption.</li>
+            <li><strong>HashMaps:</strong> Store and retrieve residential infrastructure information quickly (e.g., available amenities).</li>
+            <li><strong>Sorting Algorithms:</strong> Organize housing projects based on pricing or occupancy.</li>
         </ul>
-        <h4>2. Tourism</h4>
+        <h4>Algorithm Chosen: Kruskal’s Algorithm</h4>
+        <p><strong>Why Chosen:</strong> Kruskal’s algorithm can help design an optimal utility grid (water, electricity, gas) by connecting residential buildings with the least cost. It ensures that residential zones are connected efficiently and that resources are distributed with minimal infrastructure costs.</p>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+class Edge {
+public:
+    int u, v, w;
+};
+
+bool compare(Edge a, Edge b) {
+    return a.w &lt; b.w;
+}
+
+int find(int parent[], int i) {
+    if (parent[i] == i) return i;
+    return find(parent, parent[i]);
+}
+
+void Union(int parent[], int rank[], int x, int y) {
+    int xroot = find(parent, x);
+    int yroot = find(parent, y);
+
+    if (rank[xroot] &gt; rank[yroot]) {
+        parent[yroot] = xroot;
+    } else if (rank[xroot] &lt; rank[yroot]) {
+        parent[xroot] = yroot;
+    } else {
+        parent[yroot] = xroot;
+        rank[xroot]++;
+    }
+}
+
+void kruskal(vector<Edge>& edges, int V) {
+    vector<Edge> result;
+    int parent[V];
+    int rank[V] = {0};
+
+    for (int i = 0; i &lt; V; i++) {
+        parent[i] = i;
+    }
+
+    sort(edges.begin(), edges.end(), compare);
+
+    for (auto edge : edges) {
+        int x = find(parent, edge.u);
+        int y = find(parent, edge.v);
+
+        if (x != y) {
+            result.push_back(edge);
+            Union(parent, rank, x, y);
+        }
+    }
+
+    cout &lt;&lt; "Minimum Spanning Tree: \n";
+    for (auto edge : result) {
+        cout &lt;&lt; edge.u &lt;&lt; " - " &lt;&lt; edge.v &lt;&lt; " : " &lt;&lt; edge.w &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int V = 4; // Number of residential areas
+    vector<Edge> edges = {
+        {0, 1, 10}, {0, 2, 6}, {0, 3, 5}, {1, 3, 15}, {2, 3, 4}
+    };
+
+    kruskal(edges, V);
+
+    return 0;
+}
+        </pre>
+
+        <h4>2. Efficient Waste Management Systems</h4>
+        <p><strong>Business Case:</strong> Ensuring waste collection routes are optimized and minimizing the cost of waste disposal.</p>
         <ul>
-            <li><strong>N-Queen Problem:</strong> Place tourist information centers strategically to avoid overlapping services.</li>
-            <li><strong>Subset Generation:</strong> Create customizable travel packages for visitors.</li>
-            <li><strong>Knuth-Morris-Pratt (KMP):</strong> Search and recommend travel itineraries based on user preferences.</li>
-            <li><strong>Rabin-Karp:</strong> Validate and verify ticket IDs or booking references.</li>
-            <li><strong>Floyd-Warshall Algorithm:</strong> Find all-pairs shortest paths to suggest optimal routes between attractions.</li>
-            <li><strong>DFS:</strong> Explore tourist destinations in a depth-first manner for package creation.</li>
+            <li><strong>Graph Algorithms:</strong> BFS/DFS for efficient waste collection route planning.</li>
+            <li><strong>Kruskal’s Algorithm:</strong> Build waste disposal networks with minimal cost.</li>
+            <li><strong>Heap:</strong> Prioritize high-waste zones for faster cleanup.</li>
         </ul>
-        <h4>3. Industries</h4>
+        <h4>Algorithm Chosen: Dijkstra’s Algorithm</h4>
+        <p><strong>Why Chosen:</strong> Dijkstra’s algorithm helps optimize waste collection routes by finding the shortest paths, ensuring waste trucks cover all neighborhoods efficiently while minimizing travel time and fuel costs.</p>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+#define V 5
+
+int minDistance(int dist[], bool sptSet[]) {
+    int min = INT_MAX, min_index;
+
+    for (int v = 0; v &lt; V; v++) {
+        if (!sptSet[v] && dist[v] &lt; min) {
+            min = dist[v];
+            min_index = v;
+        }
+    }
+
+    return min_index;
+}
+
+void dijkstra(int graph[V][V], int src) {
+    int dist[V];
+    bool sptSet[V];
+
+    for (int i = 0; i &lt; V; i++) {
+        dist[i] = INT_MAX;
+        sptSet[i] = false;
+    }
+
+    dist[src] = 0;
+
+    for (int count = 0; count &lt; V - 1; count++) {
+        int u = minDistance(dist, sptSet);
+        sptSet[u] = true;
+
+        for (int v = 0; v &lt; V; v++) {
+            if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] &lt; dist[v]) {
+                dist[v] = dist[u] + graph[u][v];
+            }
+        }
+    }
+
+    cout &lt;&lt; "Shortest distances from source:\n";
+    for (int i = 0; i &lt; V; i++) {
+        cout &lt;&lt; "Node " &lt;&lt; i &lt;&lt; " : " &lt;&lt; dist[i] &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int graph[V][V] = {
+        {0, 10, 0, 0, 5},
+        {10, 0, 10, 0, 0},
+        {0, 10, 0, 5, 0},
+        {0, 0, 5, 0, 10},
+        {5, 0, 0, 10, 0}
+    };
+
+    int source = 0;
+    dijkstra(graph, source);
+
+    return 0;
+}
+        </pre>
+
+        <h4>3. E-Waste Recycling</h4>
+        <p><strong>Business Case:</strong> Managing the collection and processing of electronic waste efficiently.</p>
         <ul>
-            <li><strong>HashMaps:</strong> Efficiently store and retrieve industry data, such as factory locations, resources, and outputs.</li>
-            <li><strong>Quick Sort/Merge Sort:</strong> Rank industries based on output, energy consumption, or sustainability practices.</li>
-            <li><strong>Bellman-Ford Algorithm:</strong> Analyze industrial supply chains and calculate delivery costs with negative weights.</li>
-            <li><strong>Kruskal's Algorithm:</strong> Build optimized industrial zones with cost-effective infrastructure.</li>
+            <li><strong>Union-Find (Disjoint Sets):</strong> Track recyclable materials within connected systems for sorting.</li>
+            <li><strong>Sorting Algorithms:</strong> Heap Sort to categorize waste by material type.</li>
+            <li><strong>HashMaps:</strong> Store data on recyclable materials and their drop-off points.</li>
         </ul>
-        <h4>4. Windmills</h4>
+        <h4>Algorithm Chosen: Sorting Algorithm</h4>
+        <p><strong>Why Chosen:</strong> Sorting algorithms can help categorize and organize e-waste based on type (e.g., mobile phones, computers, batteries), making it easier for recycling centers to efficiently sort and process the materials.</p>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+void heapify(vector&lt;int&gt; &amp;arr, int n, int i) {
+    int largest = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+
+    if (l &lt; n && arr[l] &gt; arr[largest])
+        largest = l;
+
+    if (r &lt; n && arr[r] &gt; arr[largest])
+        largest = r;
+
+    if (largest != i) {
+        swap(arr[i], arr[largest]);
+        heapify(arr, n, largest);
+    }
+}
+
+void heapSort(vector&lt;int&gt; &amp;arr) {
+    int n = arr.size();
+
+    for (int i = n / 2 - 1; i &gt;= 0; i--) {
+        heapify(arr, n, i);
+    }
+
+    for (int i = n - 1; i &gt;= 0; i--) {
+        swap(arr[0], arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+int main() {
+    vector&lt;int&gt; arr = {10, 20, 15, 30, 40};
+
+    cout &lt;&lt; "Original Array: ";
+    for (int num : arr) {
+        cout &lt;&lt; num &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    heapSort(arr);
+
+    cout &lt;&lt; "Sorted Array: ";
+    for (int num : arr) {
+        cout &lt;&lt; num &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}
+        </pre>
+
+        <h4>4. Green Urban Design</h4>
+        <p><strong>Business Case:</strong> Planning and optimizing green spaces, energy-efficient buildings, and sustainable urban infrastructure.</p>
         <ul>
-            <li><strong>Segment Trees:</strong> Monitor real-time energy production across different windmill clusters and detect anomalies.</li>
-            <li><strong>Heap:</strong> Allocate energy to sectors based on priority during peak demand.</li>
-            <li><strong>Union-Find:</strong> Manage connectivity between windmill units and power grids.</li>
+            <li><strong>Graph Algorithms:</strong> Floyd-Warshall Algorithm for mapping green space connections.</li>
+            <li><strong>Segment Trees:</strong> Efficiently managing different types of vegetation in green zones.</li>
+            <li><strong>Greedy Algorithms:</strong> Optimize green space usage with minimum resources.</li>
         </ul>
-        <p>Implemented Codes:</p>
-        <ul>
-            <li><a href="./DFS.md">DFS traversal code</a></li>
-            <li><a href="./BFS.md">BFS traversal code</a></li>
-            <li><a href="./Merge.md">Merge sort</a></li>
-            <li><a href="./Dijekstras.md">Dijkstra's code</a></li>
-            <li><a href="./Kruskal.md">Kruskal's code</a></li>
-            <li><a href="./Heap.md">Heap</a></li>
-        </ul>
+        <h4>Algorithm Chosen: Floyd-Warshall Algorithm</h4>
+        <p><strong>Why Chosen:</strong> Floyd-Warshall helps in finding the shortest paths between green spaces, enabling efficient access and integration within urban layouts.</p>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+#define V 4
+
+void floydWarshall(int graph[V][V]) {
+    int dist[V][V];
+
+    for (int i = 0; i &lt; V; i++) {
+        for (int j = 0; j &lt; V; j++) {
+            dist[i][j] = graph[i][j];
+        }
+    }
+
+    for (int k = 0; k &lt; V; k++) {
+        for (int i = 0; i &lt; V; i++) {
+            for (int j = 0; j &lt; V; j++) {
+                if (dist[i][k] + dist[k][j] &lt; dist[i][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+
+    cout &lt;&lt; "Shortest distances between all pairs of vertices:\n";
+    for (int i = 0; i &lt; V; i++) {
+        for (int j = 0; j &lt; V; j++) {
+            if (dist[i][j] == INT_MAX) {
+                cout &lt;&lt; "INF ";
+            } else {
+                cout &lt;&lt; dist[i][j] &lt;&lt; " ";
+            }
+        }
+        cout &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int graph[V][V] = {
+        {0, 3, INT_MAX, 7},
+        {3, 0, 2, INT_MAX},
+        {INT_MAX, 2, 0, 5},
+        {7, INT_MAX, 5, 0}
+    };
+
+    floydWarshall(graph);
+
+    return 0;
+}
+        </pre>
     `;
+}
+
+
+function showImplementation() {
+    const content = document.getElementById('content');
+    content.innerHTML = `    <table>
+        <thead>
+            <tr>
+                <th>Algorithm/Data Structure</th>
+                <th>Used? (Yes/No)</th>
+                <th>How and Where?</th>
+                <th>Space Efficiency</th>
+                <th>Time Efficiency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arrays</td>
+                <td>Yes</td>
+                <td>Organizing housing unit data in Smart Residential Communities.</td>
+                <td>High (compact storage)</td>
+                <td>Fast for indexing.</td>
+            </tr>
+            <tr>
+                <td>Structures</td>
+                <td>Yes</td>
+                <td>Storing waste collection schedules in Waste Management Systems.</td>
+                <td>Moderate</td>
+                <td>Moderate.</td>
+            </tr>
+            <tr>
+                <td>List</td>
+                <td>Yes</td>
+                <td>Managing recyclable materials in E-Waste Recycling.</td>
+                <td>Moderate</td>
+                <td>Moderate.</td>
+            </tr>
+            <tr>
+                <td>Stack</td>
+                <td>Yes</td>
+                <td>Managing undo-redo operations in Smart Residential Communities' apps.</td>
+                <td>High</td>
+                <td>High.</td>
+            </tr>
+            <tr>
+                <td>Queue</td>
+                <td>Yes</td>
+                <td>Handling task scheduling for waste collection vehicles.</td>
+                <td>Moderate</td>
+                <td>Fast enqueue/dequeue.</td>
+            </tr>
+            <tr>
+                <td>Binary Tree</td>
+                <td>Yes</td>
+                <td>Organizing residential services in Smart Communities.</td>
+                <td>High</td>
+                <td>Fast for lookup.</td>
+            </tr>
+            <tr>
+                <td>Binary Search Tree</td>
+                <td>Yes</td>
+                <td>Searching specific services in Smart Residential Communities.</td>
+                <td>High</td>
+                <td>Logarithmic.</td>
+            </tr>
+            <tr>
+                <td>AVL Tree</td>
+                <td>Yes</td>
+                <td>Maintaining balanced service databases in Green Urban Design.</td>
+                <td>High</td>
+                <td>Logarithmic.</td>
+            </tr>
+            <tr>
+                <td>2-3 Tree</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A.</td>
+            </tr>
+            <tr>
+                <td>Red-Black Tree</td>
+                <td>Yes</td>
+                <td>Optimizing land allocation data in Green Urban Design.</td>
+                <td>High</td>
+                <td>Logarithmic.</td>
+            </tr>
+            <tr>
+                <td>Trie</td>
+                <td>Yes</td>
+                <td>Managing keyword searches for recyclable materials in E-Waste Recycling.</td>
+                <td>Moderate</td>
+                <td>Fast for prefix search.</td>
+            </tr>
+            <tr>
+                <td>Heap</td>
+                <td>Yes</td>
+                <td>Prioritizing tasks for waste collection in Waste Management Systems.</td>
+                <td>High</td>
+                <td>Logarithmic.</td>
+            </tr>
+            <tr>
+                <td>Lookup Table</td>
+                <td>Yes</td>
+                <td>Storing predefined settings for Green Urban Design simulations.</td>
+                <td>High</td>
+                <td>Constant.</td>
+            </tr>
+            <tr>
+                <td>Sparse Table</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A.</td>
+            </tr>
+            <tr>
+                <td>Fenwick Tree</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Segment Tree</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Skip List</td>
+                <td>Yes</td>
+                <td>Efficient data retrieval in large-scale community databases.</td>
+                <td>Moderate</td>
+                <td>Logarithmic</td>
+            </tr>
+            <tr>
+                <td>Union-Find</td>
+                <td>Yes</td>
+                <td>Optimizing connectivity in smart energy grids.</td>
+                <td>Moderate</td>
+                <td>Fast union/find operations</td>
+            </tr>
+            <tr>
+                <td>Hashing</td>
+                <td>Yes</td>
+                <td>Managing waste bin IDs in Waste Management Systems.</td>
+                <td>High</td>
+                <td>Constant (on average)</td>
+            </tr>
+            <tr>
+                <td>DFS</td>
+                <td>Yes</td>
+                <td>Analyzing connectivity in Smart Residential Communities.</td>
+                <td>Moderate</td>
+                <td>Linear</td>
+            </tr>
+            <tr>
+                <td>BFS</td>
+                <td>Yes</td>
+                <td>Planning optimal routes for waste collection.</td>
+                <td>Moderate</td>
+                <td>Linear</td>
+            </tr>
+            <tr>
+                <td>Bubble Sort</td>
+                <td>No</td>
+                <td>Not efficient for large datasets.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Selection Sort</td>
+                <td>No</td>
+                <td>Not efficient for large datasets.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Insertion Sort</td>
+                <td>No</td>
+                <td>Not efficient for large datasets.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Quick Sort</td>
+                <td>Yes</td>
+                <td>Sorting data like waste collection schedules.</td>
+                <td>Moderate</td>
+                <td>Fast (average case)</td>
+            </tr>
+            <tr>
+                <td>Merge Sort</td>
+                <td>Yes</td>
+                <td>Merging recyclable material data.</td>
+                <td>Moderate</td>
+                <td>Fast (guaranteed)</td>
+            </tr>
+            <tr>
+                <td>Brute Force String Search</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Rabin Karp</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Boyer-Moore</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Knuth-Morris-Pratt</td>
+                <td>Yes</td>
+                <td>Searching patterns in waste management reports.</td>
+                <td>Moderate</td>
+                <td>Linear</td>
+            </tr>
+            <tr>
+                <td>Heap Sort</td>
+                <td>Yes</td>
+                <td>Prioritizing task allocation in Waste Management Systems.</td>
+                <td>High</td>
+                <td>Logarithmic</td>
+            </tr>
+            <tr>
+                <td>Kruskal</td>
+                <td>Yes</td>
+                <td>Designing optimal energy grids in Smart Residential Communities.</td>
+                <td>High</td>
+                <td>Logarithmic</td>
+            </tr>
+            <tr>
+                <td>Prim</td>
+                <td>Yes</td>
+                <td>Planning minimum energy distribution for Green Urban Design.</td>
+                <td>High</td>
+                <td>Logarithmic</td>
+            </tr>
+            <tr>
+                <td>Dijkstra</td>
+                <td>Yes</td>
+                <td>Finding shortest routes in Waste Management Systems.</td>
+                <td>High</td>
+                <td>Logarithmic</td>
+            </tr>
+            <tr>
+                <td>Floyd-Warshall</td>
+                <td>No</td>
+                <td>Not applicable.</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford</td>
+                <td>Yes</td>
+                <td>Managing negative-weight scenarios in energy grids.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+            </tr>
+            <tr>
+                <td>Any Other</td>
+                <td>Yes</td>
+                <td>Graph-based clustering algorithms for Smart Communities.</td>
+                <td>High</td>
+                <td>High</td>
+            </tr>
+        </tbody>
+    </table>
+           `;
+    content.style.display = 'block';
+}
+function showSmartCityContent() {
+     const content = document.getElementById('content');
+    content.innerHTML = `
+        <h2>SMART-CITY</h2>
+        <p>This repository covers key algorithmic concepts and design principles used to approach various problems efficiently and their application in real-world scenarios.</p>
+        <h3>1. What are the kinds of problems we see in nature?</h3>
+        <p>Nature provides us with many examples of problem-solving techniques that align with algorithmic principles. These concepts can inspire solutions to computational challenges:</p>
+        <h4>Iteration</h4>
+        <ul>
+            <li><b>Tides:</b> The rise and fall of ocean tides follow a predictable, regular cycle.</li>
+            <li><b>Animal Foraging:</b> Animals repeat patterns while searching for food to cover more ground.</li>
+            <li><b>Seasonal Cycles:</b> The changes in seasons occur in a continuous loop, enabling life to adapt accordingly.</li>
+        </ul>
+        <h4>Recursion</h4>
+        <ul>
+            <li><b>Snowflakes:</b> The structure of a snowflake mirrors itself at every level.</li>
+            <li><b>Cauliflower:</b> Its structure looks the same from stem to tip, demonstrating a fractal pattern.</li>
+            <li><b>Trees:</b> The branching of trees replicates the same structure from trunk to branches and twigs.</li>
+            <li><b>DNA Replication:</b> DNA copying involves a step-by-step process repeated across generations.</li>
+        </ul>
+        <h4>Backtracking</h4>
+        <ul>
+            <li><b>Ant Trails:</b> Ants explore multiple paths to find food and adjust their route for efficiency.</li>
+            <li><b>Spider Webs:</b> Spiders retrace steps to fix damaged sections of their webs.</li>
+            <li><b>Maze Solving:</b> Similar to algorithms, some animals navigate mazes by retracing their steps upon hitting a dead end.</li>
+            <li><b>Roots:</b> Plant roots navigate around obstacles, changing direction to find water and nutrients.</li>
+        </ul>
+        <h3>2. Space and Time Efficiency</h3>
+        <p><b>Time Efficiency:</b> Measures how long an algorithm takes to execute based on the input size. For example, quicksort has an average time complexity of O(n log n), better suited for larger inputs compared to bubble sort (O(n²)).</p>
+        <p><b>Space Efficiency:</b> Refers to how much memory an algorithm uses. For instance, merge sort requires additional memory for merging, while in-place sorting algorithms like quicksort use less memory. Both time and space efficiencies are essential in real-world applications, especially in environments with limited computational resources, such as mobile devices or embedded systems.</p>
+        <h3>3. Classes of Problems and Orders of Growth</h3>
+        <ul>
+            <li><b>Constant (O(1):</b> Represents the fastest class, suitable for simple actions, such as retrieving an item from an array.</li>
+            <li><b>Logarithmic (O(log n)):</b> Commonly seen in binary search algorithms.</li>
+            <li><b>Linear (O(n)):</b> This class pertains to sequentially traversing a list.</li>
+            <li><b>Quadratic (O(n²)):</b> Typically associated with nested loops, such as bubble sort.</li>
+            <li><b>Exponential (O(2ⁿ)):</b> Relevant in more complex scenarios, exemplified by the N-Queens problem.</li>
+        </ul>
+        <h3>4. Takeaway from Different Design Principles (Chapter 2)</h3>
+        <ul>
+            <li><b>Divide and Conquer:</b> Break the problem into smaller sub-problems, solve each recursively, and combine the solutions. Example: Merge sort.</li>
+            <li><b>Dynamic Programming:</b> Solves problems by storing results of overlapping sub-problems to avoid redundant computations. Example: Fibonacci numbers.</li>
+            <li><b>Greedy Approach:</b> Focuses on making the best local choice at each step to ensure a globally optimal solution. Example: Huffman coding.</li>
+            <li><b>Backtracking:</b> Exploring all potential solutions methodically (e.g., the N-Queens problem).</li>
+        </ul>
+        <h3>5. Hierarchical Data and Optimization with Tree Structures</h3>
+        <p><b>Binary Search Tree (BST):</b> Ensures efficient search, insertion, and deletion (O(log n) on average).</p>
+        <p><b>AVL Trees:</b> A self-balancing BST that maintains height balance for efficiency.</p>
+        <p><b>Red-Black Tree:</b> Facilitates memory balancing in complex scenarios, such as database indexing.</p>
+        <p><b>Heaps:</b> Specialized trees used in priority queues and heapsort.</p>
+        <p><b>Tries:</b> Represent strings hierarchically, enabling quick prefix searches, like in autocomplete systems. Each type optimizes specific scenarios such as data organization, search, or hierarchical relationships.</p>
+        <h3>6. Need for Array Query Algorithms</h3>
+        <p>Array query algorithms enable efficient handling of multiple range queries or updates:</p>
+        <ul>
+            <li><b>Segment Trees:</b> Efficiently perform range queries and updates with O(log n) complexity.</li>
+            <li><b>Fenwick Trees:</b> Simplify cumulative frequency queries and prefix sums.</li>
+        </ul>
+        <p>Applications include financial calculations, gaming leaderboards, and analytics systems, where quick data retrieval is essential.</p>
+        <h3>7. Sorting and Searching Algorithms</h3>
+        <p><b>Sorting:</b> The process of arranging data, with algorithms such as quicksort suitable for vast datasets, and mergesort providing reliable sorting mechanisms.</p>
+        <p><b>Searching:</b> A method to locate specific elements, exemplified by binary search in sorted arrays.</p>
+        <h4>Real-World Applications:</h4>
+        <ul>
+            <li><b>Sorting:</b> Online retailers often arrange products based on price or popularity.</li>
+            <li><b>Searching:</b> Locating a contact in a mobile device or a product in an inventory.</li>
+        </ul>
+        <h3>8. The Relevance of Graph Algorithms in Spanning Trees and Shortest Paths</h3>
+        <p>Graphs are effective tools for modeling real-world networks, including transportation systems, social interactions, and infrastructural frameworks.</p>
+        <p><b>A spanning tree:</b> Comprises a set of edges connecting all vertices in a graph without forming cycles and is crucial for reducing connection costs in networks.</p>
+        <ul>
+            <li><b>Example:</b> In communication networks, spanning trees facilitate data routing while minimizing wiring and connection expenses. Algorithms like Kruskal’s and Prim’s assist in identifying the Minimum Spanning Tree (MST).</li>
+        </ul>
+        <p><b>Shortest Paths:</b> Shortest path algorithms determine optimal routes between points, essential for minimizing travel costs and duration.</p>
+        <ul>
+            <li><b>Dijkstra’s Algorithm:</b> Widely used in GPS navigation for finding the shortest path between locations.</li>
+            <li><b>Bellman-Ford Algorithm:</b> Identifies negative weight cycles, applicable in financial transactions.</li>
+            <li><b>Floyd-Warshall Algorithm:</b> Computes the shortest paths among all nodes, useful for network routing tables.</li>
+        </ul>
+        <h3>9. Algorithm Design Techniques: An Overview</h3>
+        <ul>
+            <li><b>Divide and Conquer:</b> Break down problems into smaller, manageable segments, solve them individually, and then combine solutions. Example: Merge Sort and Quick Sort for extensive datasets. Significance: This method simplifies overarching issues by concentrating on smaller tasks.</li>
+            <li><b>Step-by-Step Optimization:</b> Prioritize making optimal decisions at each step to achieve an overall optimal outcome. Example: Kruskal’s and Prim’s for Minimum Spanning Trees. Significance: Effective for optimization when a greedy method confirms directionality.</li>
+            <li><b>Backtracking:</b> Systematically explore all potential solutions, reverting when necessary. Example: Solving the N-Queens problem or Sudoku. Significance: Ideal for scenarios requiring comprehensive exploration.</li>
+            <li><b>Branch and Bound:</b> Analogous to backtracking, this method uses bounds to eliminate choices that cannot yield optimal solutions. Example: The Traveling Salesman Problem (TSP). Significance: This approach mitigates workload in optimization challenges.</li>
+        </ul>
+        <h3>10. Determining Efficient Solutions for Complex Problems</h3>
+        <p>To ascertain the most efficient methodology, analyzing the problem setup and inherent constraints is crucial. Identifying overlapping issues may indicate the necessity for dynamic programming, while selection problems may warrant a greedy approach. Evaluating time and space efficiency will aid in selecting the most appropriate solution.</p>
+        <h3>11. Criteria for Evaluating Solution Effectiveness</h3>
+        <p>When assessing a solution’s effectiveness, I consider its accuracy, efficiency in terms of time and space, scalability, and robustness. Additionally, practical applicability and adherence to requirements are paramount in determining the overall viability of the solution.</p>
+        <h3>12. Adapting Existing Solutions to Address New Challenges</h3>
+        <p>To accommodate new challenges, it is essential to analyze how the adjustments alter the original problem. Modifications to the existing algorithm may involve employing flexible designs or parameterized functions to facilitate adaptability and reusability.</p>
+        <h3>13. The Benefits of Decomposing Problems</h3>
+        <p>Dividing problems into smaller components enhances manageability. For example, in resolving a graph-related challenge, foundational traversal techniques such as BFS or DFS were initially established, forming a basis for developing advanced solutions like shortest-path algorithms.</p>
+    `;
+    content.style.display = 'block';
+}
+function showphase() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>Computational Thinking Table 1</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span class="highlight">Idea</span></th>
+                            <th><span class="highlight">Description</span></th>
+                            <th><span class="highlight">Can you use this in your project?</span></th>
+                            <th><span class="highlight">How and Where?</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="highlight">Decomposition</span></td>
+                            <td>Divide the problem into smaller manageable parts.</td>
+                            <td>Yes</td>
+                            <td>Breaking transportation planning into route optimization, traffic control, and maintenance.<br>
+                                Splitting tourism into destination management, tourist flow analysis, and promotional strategies.<br>
+                                For industries, dividing into resource allocation, production scheduling, and supply chain.<br>
+                                For windmills, managing site selection, energy output analysis, and maintenance scheduling.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">Pattern Recognition</span></td>
+                            <td>Identifying common recurring patterns.</td>
+                            <td>Yes</td>
+                            <td>Observing traffic congestion patterns for transportation solutions.<br>
+                                Analyzing peak tourist seasons and trends in tourist preferences.<br>
+                                Recognizing repetitive industrial resource usage and production bottlenecks.<br>
+                                Identifying wind energy fluctuations based on seasonal and geographic patterns.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">Abstraction</span></td>
+                            <td>Keep only the required data for the task.</td>
+                            <td>Yes</td>
+                            <td>Focusing on key metrics like travel time and route efficiency for transportation.<br>
+                                Simplifying tourism data to just visitor demographics and most visited locations.<br>
+                                Highlighting core industrial outputs and key performance indicators (KPIs).<br>
+                                Retaining only relevant windmill performance metrics like energy output and downtime.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h1>Computational Ideas Table 2</h1>
+                   <table>
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Idea</th>
+                <th>Description</th>
+                <th>Can you use this in your project?</th>
+                <th>How and Where?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Brute Force</td>
+                <td>The definitional way of solving the problem.</td>
+                <td>Yes</td>
+                <td>Basic allocation of waste bins in Waste Management.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Divide and Conquer</td>
+                <td>Divide the problem into smaller parts and solve.</td>
+                <td>Yes</td>
+                <td>Sub-dividing community services for better management.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Decrease and Conquer</td>
+                <td>Decrease the input size iteratively and solve.</td>
+                <td>Yes</td>
+                <td>Gradual expansion of recycling facilities in E-Waste.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Transform and Conquer</td>
+                <td>Change the problem representation for efficiency.</td>
+                <td>Yes</td>
+                <td>Using energy-efficient models in Green Urban Design.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dynamic Programming</td>
+                <td>Use smaller solutions to build larger ones.</td>
+                <td>Yes</td>
+                <td>Planning waste routes using optimal sub-solutions.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Greedy Technique</td>
+                <td>Select optimal choice in each iteration.</td>
+                <td>Yes</td>
+                <td>Route optimization in Waste Management Systems.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Space and Time Tradeoff</td>
+                <td>Optimize either space or time (e.g., hashing).</td>
+                <td>Yes</td>
+                <td>Hashing data for quick lookup in Smart Residential Systems.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Backtracking</td>
+                <td>Prune unnecessary state-space elements.</td>
+                <td>Yes</td>
+                <td>Pruning infeasible design layouts in Green Urban Design.</td>
+            </tr>
+        </tbody>
+    </table>
+        <h1>Computational Ideas Table 3</h1>
+        
+    <table>
+    <thead>
+        <tr>
+            <th>Sl. No.</th>
+            <th>Idea</th>
+            <th>Description</th>
+            <th>Can you use this in your project?</th>
+            <th>How and Where?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Brave and Cautious Travel</td>
+            <td>Explore breadth or depth-wise till a solution is found.</td>
+            <td>Yes</td>
+            <td>BFS/DFS in Smart Communities' energy grid exploration.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pruning</td>
+            <td>Remove unnecessary parts.</td>
+            <td>Yes</td>
+            <td>Removing infeasible recycling routes in E-Waste.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Lazy Propagation</td>
+            <td>Update only when necessary.</td>
+            <td>Yes</td>
+            <td>Updating energy grids in Green Urban Design.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Sliding Window</td>
+            <td>View a smaller dataset portion for efficient processing.</td>
+            <td>Yes</td>
+            <td>Managing time-series waste data in Waste Management.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Level Order Traversal</td>
+            <td>Explore data layer by layer.</td>
+            <td>Yes</td>
+            <td>Traversing hierarchical service data in Smart Communities.</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Hierarchical Data & Trees</td>
+            <td>Organize data in a tree structure.</td>
+            <td>Yes</td>
+            <td>Managing energy distribution for Green Urban Design.</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Edge Relaxation</td>
+            <td>Select the minimum edge and make it part of the solution.</td>
+            <td>Yes</td>
+            <td>Optimizing transportation routes in Waste Management.</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Balancing a Tree</td>
+            <td>Balance skewed data for efficient processing.</td>
+            <td>Yes</td>
+            <td>Balancing resource distribution networks in Smart Communities.</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Kleene Closure</td>
+            <td>Apply transitive properties for relationships.</td>
+            <td>Yes</td>
+            <td>Establishing connections between recycling facilities and drop points.</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Pre-Computing</td>
+            <td>Compute results in advance for efficiency.</td>
+            <td>Yes</td>
+            <td>Pre-computing energy consumption patterns in Smart Communities.</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Parental Dominance</td>
+            <td>Maintain priority-based organization of data.</td>
+            <td>Yes</td>
+            <td>Prioritizing critical waste management tasks.</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Prefix and Suffix</td>
+            <td>Generate prefix and suffix for efficient string operations.</td>
+            <td>Yes</td>
+            <td>Analyzing patterns in waste collection or recycling requests.</td>
+        </tr>
+    </tbody>
+</table>`;
     content.style.display = 'block';
 }
 
 
-    </script>
-
+</script>
 </head>
 <body>
-    <h1>Welcome to Smart City AAROHAN</h1>
-    <h2 class="subtitle">The city of Ascendry...</h2>
+    <div class="home">
+        <div class="home-box">
+            <h2>Project Presentation</h2>
+            <p class="subheading">Innovative Approaches to Sustainability and Urban Development</p>
+            
+        </div>
+    </div>
 
-    <div id="content"></div>
 <div class="button-container">
-    <button onclick="showIntroduction()">Introduction</button>
-    <button onclick="showSDGMapping()">SDG Mapping</button>
+    <button onclick="showSmartCityContent()">Course reflection</button>
     <button onclick="showBusinessCases()">Business Cases</button>
+    <button onclick="showSDGMapping()">SDG Mapping</button>
     <button onclick="showCodeImplementation()">code implementation</button>
-    <a href="https://shreya-301.github.io/DAA-PROJECT/DAA IMPLEMENTATION.docx" target="_blank" class="button">Sample 3</a>
+    <button onclick="showImplementation()">Implementation Analysis</button>
+    <button onclick="showphase()">Computation table</button>
+    <a href="https://shreya-301.github.io/DAA-PROJECT/DAAIMPLEMENTATION.docx" target="_blank" class="button">Sample 3</a>
 </div>
-
+<div id="content"></div>
 </body>
 </html>
